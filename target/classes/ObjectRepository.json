@@ -1,0 +1,153 @@
+[
+  {
+    "pageName": "HomePage",
+    "name": "signUpOrLogin",
+    "locateUsing": "xpath",
+    "locator": "//*[contains(@class,'c-btn--large')]/span[text()='Sign up or log in']"
+  },
+  {
+    "pageName": "HomePage",
+    "name": "acceptPrivacyPolicy",
+    "locateUsing": "xpath",
+    "locator": "//button/div/div[text()='Accept All']"
+  },
+  {
+    "pageName": "SignInPage",
+    "name": "emailAddress",
+    "locateUsing": "xpath",
+    "locator": "//*[@id=\"email\"]"
+  },
+  {
+    "pageName": "SignInPage",
+    "name": "continueWithEmailBtn",
+    "locateUsing": "xpath",
+    "locator": "//button/div/div[text()='Continue with Email']"
+  },
+  {
+    "pageName": "SignInPage",
+    "name": "password",
+    "locateUsing": "xpath",
+    "locator": "//*[@id=\"password\"]"
+  },
+  {
+    "pageName": "DiscoverPage",
+    "name": "text",
+    "locateUsing": "xpath",
+    "locator": "//*[text()='Find the Perfect Tour']"
+  },
+  {
+    "pageName": "SignInPage",
+    "name": "logInBtn",
+    "locateUsing": "xpath",
+    "locator": "//button/div/div[text()='Log In']"
+  },
+  {
+    "pageName": "DiscoverPage",
+    "name": "hiking",
+    "locateUsing": "xpath",
+    "locator": "//div[@data-value='hike']/div"
+  },
+  {
+    "pageName": "DiscoverPage",
+    "name": "bike",
+    "locateUsing": "xpath",
+    "locator": "//div[@data-value='touringbicycle']/div"
+  },  
+  {
+    "pageName": "DiscoverPage",
+    "name": "running",
+    "locateUsing": "xpath",
+    "locator": "//div[@data-value='jogging']/div"
+  },
+  {
+    "pageName": "DiscoverPage",
+    "name": "location",
+    "locateUsing": "xpath",
+    "locator": "//input[@placeholder='Where to?']"
+  },
+  {
+    "pageName": "DiscoverPage",
+    "name": "searchBtn",
+    "locateUsing": "xpath",
+    "locator": "//*[contains(@class,'primary c-btn--large')]/span[text()='Search']"
+  },
+  {
+    "pageName": "DiscoverPage",
+    "name": "myMenu",
+    "locateUsing": "xpath",
+    "locator": "//div[contains(@class,'bg-transparent tw-text')]"
+  },
+  {
+    "pageName": "DiscoverPage",
+    "name": "signOutBtn",
+    "locateUsing": "xpath",
+    "locator": "//a[@href='/logout']"
+  },
+  {
+    "pageName": "SearchResultsPage",
+    "name": "easy",
+    "locateUsing": "xpath",
+    "locator": "//*[contains(@class,'c-difficulty-filter--easy')]"
+  },
+  {
+    "pageName": "SearchResultsPage",
+    "name": "intermediate",
+    "locateUsing": "xpath",
+    "locator": "//*[contains(@class,'c-difficulty-filter--moderate')]"
+  },
+  {
+    "pageName": "SearchResultsPage",
+    "name": "difficult",
+    "locateUsing": "xpath",
+    "locator": "//*[contains(@class,'c-difficulty-filter--difficult')]"
+  },
+  {
+    "pageName": "SearchResultsPage",
+    "name": "milesDropDown",
+    "locateUsing": "xpath",
+    "locator": "//*[contains(@class,'c-dropdown--right tw-inline-block')]"
+  },
+  {
+    "pageName": "SearchResultsPage",
+    "name": "milesThree",
+    "locateUsing": "xpath",
+    "locator": "//*[contains(@class,'right tw-inline-block')]/ul/li[1]"
+  },
+  {
+    "pageName": "SearchResultsPage",
+    "name": "milesFive",
+    "locateUsing": "xpath",
+    "locator": "//*[contains(@class,'right tw-inline-block')]/ul/li[2]"
+  },
+  {
+    "pageName": "SearchResultsPage",
+    "name": "milesTen",
+    "locateUsing": "xpath",
+    "locator": "//*[contains(@class,'right tw-inline-block')]/ul/li[3]"
+  },
+  {
+    "pageName": "SearchResultsPage",
+    "name": "milesTwenty",
+    "locateUsing": "xpath",
+    "locator": "//*[contains(@class,'right tw-inline-block')]/ul/li[4]"
+  },
+  {
+    "pageName": "SearchResultsPage",
+    "name": "publicTransport",
+    "locateUsing": "xpath",
+    "locator": "check with JiHSA"
+  },
+  {
+    "pageName": "SearchResultsPage",
+    "name": "searchResults",
+    "locateUsing": "xpath",
+    "locator": "//div[@class='css-hga51k']/div/span/span[1]"
+  },
+  {
+    "pageName": "SearchResultsPage",
+    "name": "expcetedTourOne",
+    "locateUsing": "xpath",
+    "locator": "//a[@href='/smarttour/3174585#os#']/h3"
+  }
+  
+]

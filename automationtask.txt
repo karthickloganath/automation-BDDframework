@@ -1,0 +1,21 @@
+# Assignment Notes
+#
+##### This is a temporary file for reference to the 7Senders team for evaluating the QA Task assigned #######
+
+# To run the project, please use the instructions as in readMe.md
+# Please note this project was executed and results-verified only in windows machine with chrome version 87.0.4280.88
+
+# Changes made in the project are explained below:
+# 1. Addition of new folder 'drivers' inside the PROJECT_HOME
+# - Latest chrome drivers are downloaded into this directory which makes it convenient to user to
+# run without the need to download the chrome driver themselves
+# -** Exception** - In case of non-compatible issues with Chrome installed on system, please download and provide the path to config.properties
+
+# 2. Objects Locators
+# - The object locators are captured into a JSON for maintenance to be easier and add a layer of modularity to separate objects from page classes
+# - Interface, Factory classes are implemented to parse and get the locator type and values from JSON
+
+# 3. Implementation of Test cases for Komoot.com
+# - It is assumed that the user has signedUp already in Komoot and has valid credentials 
+#**Thread.sleep was used in SearchBikeSteps.java in the step 66 as elements are visible after page load and usage of implicit and 
+#  explicit wait checks fail due to this reason. And due to this reason, Thread.sleep was suggested as a better option.
