@@ -5,8 +5,10 @@ pages\HomePage.class
 pages\SignInPage.class
 helpers\CustomAnnotations.class
 pages\SearchResultsPage.class
+pages\ShopProductPage.class
 utils\WebDriverSetup.class
 helpers\WebDriverBasedElementLocator.class
+steps\KomootStepDefinitions.class
 helpers\FileBasedElementLocatorFactory.class
 pages\DiscoverPage.class
 utils\PropertyProvider.class

@@ -80,22 +80,20 @@ public class SearchResultsPage extends HomePage{
     }
 
     public int numOfFilteredResults() {
-        int count = Integer.parseInt(searchResults.getText());
-        return count;
+        return Integer.parseInt(searchResults.getText());
     }
     
     public void saveMyTour() {
     	saveMyTour.click();
-    	//WebElement saveTour =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'tw-p-3 tw-text-right')]/button")));
     	driver.findElement(By.xpath("//div[contains(@class,'tw-p-3 tw-text-right')]/button")).click();
-    	WebElement exploreResponsibly = driver.findElement(By.xpath("//button[@type='submit']"));
-    	if(exploreResponsibly !=null) {
-    		exploreResponsibly.click();
-    	}  		
+    	WebElement saveTour = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
+    	saveTour.click();
+    	
     }
     
     public String tourNameSelected() {
     	return myTourName.getText();
+    	
     }
 }
 

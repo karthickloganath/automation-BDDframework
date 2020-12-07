@@ -30,16 +30,16 @@
     "locator": "//*[@id=\"password\"]"
   },
   {
-    "pageName": "DiscoverPage",
-    "name": "text",
-    "locateUsing": "xpath",
-    "locator": "//*[text()='Find the Perfect Tour']"
-  },
-  {
     "pageName": "SignInPage",
     "name": "logInBtn",
     "locateUsing": "xpath",
     "locator": "//button/div/div[text()='Log In']"
+  },
+  {
+    "pageName": "DiscoverPage",
+    "name": "text",
+    "locateUsing": "xpath",
+    "locator": "//*[text()='Find the Perfect Tour']"
   },
   {
     "pageName": "DiscoverPage",
@@ -76,6 +76,12 @@
     "name": "myMenu",
     "locateUsing": "xpath",
     "locator": "//div[contains(@class,'bg-transparent tw-text')]"
+  },
+  {
+    "pageName": "DiscoverPage",
+    "name": "shop",
+    "locateUsing": "xpath",
+    "locator": "//a[@href='/shop']"
   },
   {
     "pageName": "DiscoverPage",
@@ -159,7 +165,49 @@
     "pageName": "SearchResultsPage",
     "name": "saveMyTour",
     "locateUsing": "xpath",
-    "locator": "//div[@id='discover_smarttour_3174585']//button/span[2]"
+    "locator": "//div[@id='discover_smarttour_3160125']//button/span[2]"
+  },
+  {
+    "pageName": "ShopProductPage",
+    "name": "singleRegion",
+    "locateUsing": "xpath",
+    "locator": "(//div[@class='css-1v4j5c2'])[2]"
+  },
+    {
+    "pageName": "ShopProductPage",
+    "name": "singleRegionPrice",
+    "locateUsing": "xpath",
+    "locator": "(//div[@class='css-1fh9ug8'])[15]/div"
+  },
+  {
+    "pageName": "ShopProductPage",
+    "name": "regionBundle",
+    "locateUsing": "xpath",
+    "locator": "(//div[@class='css-1v4j5c2'])[10]"
+  },
+  {
+    "pageName": "ShopProductPage",
+    "name": "regionBundlePrice",
+    "locateUsing": "xpath",
+    "locator": "(//div[@class='css-1fh9ug8'])[19]/div"
+  },
+  {
+    "pageName": "ShopProductPage",
+    "name": "theWorld",
+    "locateUsing": "xpath",
+    "locator": "(//div[@class='css-1v4j5c2'])[18]"
+  },
+  {
+    "pageName": "ShopProductPage",
+    "name": "theWorldPrice",
+    "locateUsing": "xpath",
+    "locator": "(//div[@class='css-1fh9ug8'])[23]/div"
+  },
+  {
+    "pageName": "ShopProductPage",
+    "name": "mapsLogo",
+    "locateUsing": "xpath",
+    "locator": "//img[@alt='komoot maps logo']"
   }
-  
+   
 ]

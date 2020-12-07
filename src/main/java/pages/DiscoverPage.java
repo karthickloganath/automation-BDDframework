@@ -1,13 +1,9 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
-
 import helpers.SearchWith;
-import org.openqa.selenium.support.PageFactory;
 
 public class DiscoverPage extends HomePage {
     public static final String PAGE = "DiscoverPage";
@@ -33,6 +29,9 @@ public class DiscoverPage extends HomePage {
     @SearchWith(inPage = DiscoverPage.PAGE, locatorsFile = "src/main/resources/ObjectRepository.json", name = "signOutBtn")
     private WebElement signOutBtn ;
     
+    @SearchWith(inPage = DiscoverPage.PAGE, locatorsFile = "src/main/resources/ObjectRepository.json", name = "shop")
+    private WebElement shop ;
+    
     public DiscoverPage(WebDriver driver) {
         super(driver);
     }
@@ -54,6 +53,10 @@ public class DiscoverPage extends HomePage {
 
     public void clickSearch() {
         searchBtn.click();
+    }
+    
+    public void clickShop() {
+        shop.click();
     }
     
     public void signOut() {

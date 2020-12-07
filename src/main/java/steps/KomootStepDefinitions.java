@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import pages.DiscoverPage;
 import pages.HomePage;
 import pages.SearchResultsPage;
+import pages.ShopProductPage;
 import pages.SignInPage;
 import utils.PropertyProvider;
 import utils.WebDriverSetup;
@@ -21,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 
-public class SearchAndSaveTour  {
+public class KomootStepDefinitions  {
     public static WebDriver driver;
     private Properties properties;
     public static WebPageHelper webPageHelper;
@@ -29,6 +30,7 @@ public class SearchAndSaveTour  {
     public SignInPage signInPage;
     public DiscoverPage discoverPage;
     public SearchResultsPage searchResultsPage;
+    public ShopProductPage shopProductPage;
 
     @Before
     public void before() {
@@ -39,6 +41,7 @@ public class SearchAndSaveTour  {
         signInPage = new SignInPage(driver);
         discoverPage = new DiscoverPage(driver);
         searchResultsPage = new SearchResultsPage(driver);
+        shopProductPage = new ShopProductPage(driver);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
@@ -82,19 +85,37 @@ public class SearchAndSaveTour  {
         searchResultsPage.selectMiles(miles);
     }
 
+    @When("I shop for komoot maps plan")
+    public void i_Shop_Komoot_Plans() {
+    	discoverPage.clickShop();
+    	shopProductPage.clickDiscoverMore();
+    }
+    
     @Then("the filtered search results are displayed")
     public void isDisplayingOnlyFilteredSearchResults() {
         int numofResults = searchResultsPage.numOfFilteredResults();
         assertTrue("Error in displaying filtered results", numofResults > 0);
     }
     
-	@Then("I am able to select my tour {string} an save it")
+	@Then("I am able to select my tour {string} and save it")
 	public void i_Select_MyTour_And_Save(String tourName){
 		searchResultsPage.saveMyTour();
 		String tourNameFormat = tourName.replaceAll("[^a-zA-Z0-9]", " "); 
 		String selectedTourName = searchResultsPage.tourNameSelected();
-		String selectedTourNameFormat = selectedTourName.replaceAll("[^a-zA-Z0-9]", " "); 
-		assertTrue("Mismatch in Tour Name",selectedTourNameFormat.equals(tourNameFormat));
+		String actualTourNameFormat = selectedTourName.replaceAll("[^a-zA-Z0-9]", " "); 
+		assertTrue("Mismatch in Tour Name",actualTourNameFormat.equals(tourNameFormat));
 	}
+	
+   @Then("the komoot maps plan bundle is displayed")
+    public void the_Komoot_Maps_Bundle_Displayed() {
+    	assertTrue("The Kommot Maps page is not Displayed",shopProductPage.validateMapsPage());
+    }
+    
+    @Then("I verify the bundle name {string} and its price {float}")
+    public void i_Verify_Bundle_And_Price(String region, float rate) {
+    	assertTrue("The Region is Not Matching",shopProductPage.regionText(region).equalsIgnoreCase(region));
+    	assertTrue("Price Value is Not Matching",shopProductPage.regionPrice(region).equals(rate));
+    }
+	
 
 }
