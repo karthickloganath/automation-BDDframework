@@ -19,3 +19,6 @@
 # - It is assumed that the user has signedUp already in Komoot and has valid credentials 
 #**Thread.sleep was used in SearchBikeSteps.java in the step 66 as elements are visible after page load and usage of implicit and 
 #  explicit wait checks fail due to this reason. And due to this reason, Thread.sleep was suggested as a better option.
+
+# 4. Validation of Tour Name
+# - The validation of Tour Name is done without the special characters, please refer the code SearchAndSaveTour.java in steps 91 and 93.

@@ -1,13 +1,16 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import helpers.SearchWith;
-import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class SearchResultsPage extends HomePage{
     public static final String PAGE = "SearchResultsPage";
+    protected WebDriverWait wait;
 
     @SearchWith(inPage = SearchResultsPage.PAGE, locatorsFile = "src/main/resources/ObjectRepository.json", name = "easy")
     private WebElement easy ;
@@ -36,9 +39,15 @@ public class SearchResultsPage extends HomePage{
     @SearchWith(inPage = SearchResultsPage.PAGE, locatorsFile = "src/main/resources/ObjectRepository.json", name = "searchResults")
     private WebElement searchResults ;
     
+    @SearchWith(inPage = SearchResultsPage.PAGE, locatorsFile = "src/main/resources/ObjectRepository.json", name = "myTourName")
+    private WebElement myTourName ;
+    
+    @SearchWith(inPage = SearchResultsPage.PAGE, locatorsFile = "src/main/resources/ObjectRepository.json", name = "saveMyTour")
+    private WebElement saveMyTour ;
     
     public SearchResultsPage(WebDriver driver) {
         super(driver);
+        wait = new WebDriverWait(driver, 10);
     }
 
     public void selectDifficulty(String difficulty) {
@@ -73,6 +82,20 @@ public class SearchResultsPage extends HomePage{
     public int numOfFilteredResults() {
         int count = Integer.parseInt(searchResults.getText());
         return count;
+    }
+    
+    public void saveMyTour() {
+    	saveMyTour.click();
+    	//WebElement saveTour =wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'tw-p-3 tw-text-right')]/button")));
+    	driver.findElement(By.xpath("//div[contains(@class,'tw-p-3 tw-text-right')]/button")).click();
+    	WebElement exploreResponsibly = driver.findElement(By.xpath("//button[@type='submit']"));
+    	if(exploreResponsibly !=null) {
+    		exploreResponsibly.click();
+    	}  		
+    }
+    
+    public String tourNameSelected() {
+    	return myTourName.getText();
     }
 }
 

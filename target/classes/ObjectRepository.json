@@ -148,6 +148,18 @@
     "name": "expcetedTourOne",
     "locateUsing": "xpath",
     "locator": "//a[@href='/smarttour/3174585#os#']/h3"
+  },
+  {
+    "pageName": "SearchResultsPage",
+    "name": "myTourName",
+    "locateUsing": "xpath",
+    "locator": "//div[@class='o-media__body']/h1/span"
+  },
+  {
+    "pageName": "SearchResultsPage",
+    "name": "saveMyTour",
+    "locateUsing": "xpath",
+    "locator": "//div[@id='discover_smarttour_3174585']//button/span[2]"
   }
   
 ]

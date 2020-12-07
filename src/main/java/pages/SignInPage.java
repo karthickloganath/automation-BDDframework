@@ -1,11 +1,9 @@
 package pages;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import helpers.SearchWith;
-import org.openqa.selenium.support.PageFactory;
 
 public class SignInPage extends HomePage {
     public static final String PAGE = "SignInPage";

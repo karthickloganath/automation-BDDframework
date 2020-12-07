@@ -6,6 +6,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+
 import org.openqa.selenium.WebDriver;
 import pages.DiscoverPage;
 import pages.HomePage;
@@ -20,7 +21,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 
-public class SearchBikeSteps {
+public class SearchAndSaveTour  {
     public static WebDriver driver;
     private Properties properties;
     public static WebPageHelper webPageHelper;
@@ -38,10 +39,12 @@ public class SearchBikeSteps {
         signInPage = new SignInPage(driver);
         discoverPage = new DiscoverPage(driver);
         searchResultsPage = new SearchResultsPage(driver);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
 
     @After
     public void tearDown() {
+    	discoverPage.signOut();
         driver.quit();
     }
 
@@ -63,7 +66,7 @@ public class SearchBikeSteps {
 
     @When("I search for tour {string} in location {string}")
     public void i_Search_Tour_in_Location(String tour, String location) throws InterruptedException, MalformedURLException {
-        Thread.sleep(2000);
+        Thread.sleep(3000);
         //driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         if (tour.equalsIgnoreCase("bike")) {
             discoverPage.selectBike();
@@ -83,7 +86,15 @@ public class SearchBikeSteps {
     public void isDisplayingOnlyFilteredSearchResults() {
         int numofResults = searchResultsPage.numOfFilteredResults();
         assertTrue("Error in displaying filtered results", numofResults > 0);
-        discoverPage.signOut();
     }
+    
+	@Then("I am able to select my tour {string} an save it")
+	public void i_Select_MyTour_And_Save(String tourName){
+		searchResultsPage.saveMyTour();
+		String tourNameFormat = tourName.replaceAll("[^a-zA-Z0-9]", " "); 
+		String selectedTourName = searchResultsPage.tourNameSelected();
+		String selectedTourNameFormat = selectedTourName.replaceAll("[^a-zA-Z0-9]", " "); 
+		assertTrue("Mismatch in Tour Name",selectedTourNameFormat.equals(tourNameFormat));
+	}
 
 }

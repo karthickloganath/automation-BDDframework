@@ -1,10 +1,6 @@
 package pages;
 
 import helpers.FileBasedElementLocatorFactory;
-import helpers.WebPageHelper;
-
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -34,7 +30,7 @@ public class HomePage {
 	}
 
 	public void acceptPolicy() {
-		wait.until(ExpectedConditions.elementToBeClickable(acceptPrivacyPolicy));
+		//wait.until(ExpectedConditions.elementToBeClickable(acceptPrivacyPolicy));
 		acceptPrivacyPolicy.click();
 	}
 

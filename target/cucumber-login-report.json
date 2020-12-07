@@ -3,30 +3,30 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2020-12-06T20:08:49.110Z",
+        "start_timestamp": "2020-12-07T03:41:58.274Z",
         "before": [
           {
             "result": {
-              "duration": 5004085400,
+              "duration": 6531834600,
               "status": "passed"
             },
             "match": {
-              "location": "steps.SearchBikeSteps.before()"
+              "location": "steps.SearchAndSaveTour.before()"
             }
           }
         ],
         "line": 5,
-        "name": "I want to be able to search bike tour",
+        "name": "I want to be able to search hiking tour",
         "description": "",
-        "id": "login-and-search-tour;i-want-to-be-able-to-search-bike-tour",
+        "id": "login-and-search-tour;i-want-to-be-able-to-search-hiking-tour",
         "after": [
           {
             "result": {
-              "duration": 1071709900,
+              "duration": 7322031700,
               "status": "passed"
             },
             "match": {
-              "location": "steps.SearchBikeSteps.tearDown()"
+              "location": "steps.SearchAndSaveTour.tearDown()"
             }
           }
         ],
@@ -35,19 +35,19 @@
         "steps": [
           {
             "result": {
-              "duration": 4585696400,
+              "duration": 3621092200,
               "status": "passed"
             },
             "line": 6,
             "name": "I launch the site",
             "match": {
-              "location": "steps.SearchBikeSteps.iLaunchSite()"
+              "location": "steps.SearchAndSaveTour.iLaunchSite()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 12155935700,
+              "duration": 10772068500,
               "status": "passed"
             },
             "line": 7,
@@ -63,13 +63,147 @@
                   "offset": 63
                 }
               ],
-              "location": "steps.SearchBikeSteps.iLoginUsingEmailAndPassword(java.lang.String,java.lang.String)"
+              "location": "steps.SearchAndSaveTour.iLoginUsingEmailAndPassword(java.lang.String,java.lang.String)"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 11156478800,
+              "duration": 11606415900,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I search for tour \u0027hike\u0027 in location \u0027Munich\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027hike\u0027",
+                  "offset": 18
+                },
+                {
+                  "val": "\u0027Munich\u0027",
+                  "offset": 37
+                }
+              ],
+              "location": "steps.SearchAndSaveTour.i_Search_Tour_in_Location(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 6572147500,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I apply difficulty \u0027Easy\u0027 and distance 5 filters",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Easy\u0027",
+                  "offset": 19
+                },
+                {
+                  "val": "5",
+                  "offset": 39
+                }
+              ],
+              "location": "steps.SearchAndSaveTour.i_Apply_Diffculty_And_Distance_Filters(java.lang.String,int)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1575728900,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the filtered search results are displayed",
+            "match": {
+              "location": "steps.SearchAndSaveTour.isDisplayingOnlyFilteredSearchResults()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Login and search Tour",
+    "description": "  As a user,\n  I want to the Login and Search Tour Plans",
+    "id": "login-and-search-tour",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/loginAndSearchHike.feature",
+    "tags": []
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2020-12-07T03:42:46.374Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5862225000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.SearchAndSaveTour.before()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "I want to be able to search bike tour and save selected tour",
+        "description": "",
+        "id": "login-and-search-tour;i-want-to-be-able-to-search-bike-tour-and-save-selected-tour",
+        "after": [
+          {
+            "result": {
+              "duration": 6420133800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "steps.SearchAndSaveTour.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 3233101100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I launch the site",
+            "match": {
+              "location": "steps.SearchAndSaveTour.iLaunchSite()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 11254899600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I login using email \u0027learngermankarthi@gmail.com\u0027 and password \u0027Klk@129345\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027learngermankarthi@gmail.com\u0027",
+                  "offset": 20
+                },
+                {
+                  "val": "\u0027Klk@129345\u0027",
+                  "offset": 63
+                }
+              ],
+              "location": "steps.SearchAndSaveTour.iLoginUsingEmailAndPassword(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 11445894300,
               "status": "passed"
             },
             "line": 8,
@@ -85,53 +219,70 @@
                   "offset": 37
                 }
               ],
-              "location": "steps.SearchBikeSteps.i_Search_Tour_in_Location(java.lang.String,java.lang.String)"
+              "location": "steps.SearchAndSaveTour.i_Search_Tour_in_Location(java.lang.String,java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//*[contains(@class,\u0027c-difficulty-filter--easy\u0027)]\"}\n  (Session info: chrome\u003d87.0.4280.88)\nFor documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027LAPTOP-QA787IDP\u0027, ip: \u0027172.26.128.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002714.0.2\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 87.0.4280.88, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\\Users\\KARTHI~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:55472}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}\nSession ID: 41b7e1571bbcd70a0f6a579e0d9d98eb\n*** Element info: {Using\u003dxpath, value\u003d//*[contains(@class,\u0027c-difficulty-filter--easy\u0027)]}\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:353)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat helpers.FileBasedElementLocator.findElement(FileBasedElementLocator.java:37)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy18.click(Unknown Source)\r\n\tat pages.SearchResultsPage.selectDifficulty(SearchResultsPage.java:45)\r\n\tat steps.SearchBikeSteps.i_Apply_Diffculty_And_Distance_Filters(SearchBikeSteps.java:75)\r\n\tat ✽.I apply difficulty \u0027Easy\u0027 and distance 3 filters(file:///C:/Users/Karthik%20L/Downloads/automationtask-sevensenders/src/test/resources/features/loginAndSearchBike.feature:9)\r\n",
-              "duration": 1638925700,
-              "status": "failed"
+              "duration": 6446438900,
+              "status": "passed"
             },
             "line": 9,
-            "name": "I apply difficulty \u0027Easy\u0027 and distance 3 filters",
+            "name": "I apply difficulty \u0027Difficult\u0027 and distance 3 filters",
             "match": {
               "arguments": [
                 {
-                  "val": "\u0027Easy\u0027",
+                  "val": "\u0027Difficult\u0027",
                   "offset": 19
                 },
                 {
                   "val": "3",
-                  "offset": 39
+                  "offset": 44
                 }
               ],
-              "location": "steps.SearchBikeSteps.i_Apply_Diffculty_And_Distance_Filters(java.lang.String,int)"
+              "location": "steps.SearchAndSaveTour.i_Apply_Diffculty_And_Distance_Filters(java.lang.String,int)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1000500,
-              "status": "skipped"
+              "duration": 1648604400,
+              "status": "passed"
             },
             "line": 10,
             "name": "the filtered search results are displayed",
             "match": {
-              "location": "steps.SearchBikeSteps.isDisplayingOnlyFilteredSearchResults()"
+              "location": "steps.SearchAndSaveTour.isDisplayingOnlyFilteredSearchResults()"
             },
             "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 7211189600,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am able to select my tour \"Hochleite - Isarhochufer � Isarauen Loop from Silberhornstra�e\" an save it",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Hochleite - Isarhochufer � Isarauen Loop from Silberhornstra�e\"",
+                  "offset": 28
+                }
+              ],
+              "location": "steps.SearchAndSaveTour.i_Select_MyTour_And_Save(java.lang.String)"
+            },
+            "keyword": "And "
           }
         ]
       }
     ],
     "name": "Login and search Tour",
-    "description": "  As a user,\n  I want to the Login and Search Tour Plans",
+    "description": "  As a user,\n  I want to the Login and Search Tour plans and Save a Selected Tour",
     "id": "login-and-search-tour",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/loginAndSearchBike.feature",
+    "uri": "file:src/test/resources/features/searchAndSaveBikeTour.feature",
     "tags": []
   }
 ]
