@@ -16,6 +16,12 @@ import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+
+/**
+ * Helper to parse JSON and read object locator types and values
+ *
+ */
+
 class CustomAnnotations extends AbstractAnnotations {
 	
     private final Field field;

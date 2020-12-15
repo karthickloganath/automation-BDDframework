@@ -22,6 +22,10 @@ import java.util.concurrent.TimeUnit;
 
 import static org.junit.Assert.assertTrue;
 
+/**
+ * Step Definitions for Feature Files
+ */
+
 public class KomootStepDefinitions  {
     public static WebDriver driver;
     private Properties properties;

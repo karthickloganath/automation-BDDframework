@@ -9,6 +9,10 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * Class representing the Komoot HomePage
+ */
+
 public class HomePage {
 	
 	public static final String PAGE = "HomePage";
@@ -28,11 +32,13 @@ public class HomePage {
 		wait = new WebDriverWait(driver, 10);
 	}
 
+	// Accepts the privacy policy prompt
 	public void acceptPolicy() {
 		//wait.until(ExpectedConditions.elementToBeClickable(acceptPrivacyPolicy));
 		acceptPrivacyPolicy.click();
 	}
 
+	// Select SignUporLogin Button
 	public void clickSignUpOrLogin() {
 		signUpOrLogin.click();
 	}

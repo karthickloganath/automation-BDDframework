@@ -2,6 +2,10 @@ package helpers;
 
 import org.openqa.selenium.By;
 
+/**
+ * Helper to determine on how to locate the web element
+ */
+
 public abstract class WebDriverBasedElementLocator extends By {
 
     public static By locateElement(String locateUsing, String locatorValue) {

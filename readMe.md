@@ -1,4 +1,4 @@
-## 7 Senders | QA Automation Task | Assessment
+## Komoot.com | QA Automation |
 
 ### Introduction
 Dear Team,

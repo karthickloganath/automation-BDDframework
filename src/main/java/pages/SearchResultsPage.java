@@ -8,6 +8,10 @@ import helpers.SearchWith;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * Class representing the Search Results Page
+ */
+
 public class SearchResultsPage extends HomePage{
     public static final String PAGE = "SearchResultsPage";
     protected WebDriverWait wait;
@@ -50,6 +54,9 @@ public class SearchResultsPage extends HomePage{
         wait = new WebDriverWait(driver, 10);
     }
 
+    /**Select desired Difficulty to filter search results
+     * @param difficulty
+     */ 
     public void selectDifficulty(String difficulty) {
         if (difficulty.equalsIgnoreCase("easy")) {
             easy.click();
@@ -60,6 +67,9 @@ public class SearchResultsPage extends HomePage{
         }
     }
 
+    /** Select Desired Miles to filter search results
+     * @param miles
+     */
     public void selectMiles(int miles) {
         milesDropDown.click();
         switch (miles) {
@@ -79,18 +89,23 @@ public class SearchResultsPage extends HomePage{
 
     }
 
+    /** Return the results count
+     * @return
+     */
     public int numOfFilteredResults() {
         return Integer.parseInt(searchResults.getText());
     }
     
+    // Select and save the tour of your choice
     public void saveMyTour() {
     	saveMyTour.click();
     	driver.findElement(By.xpath("//div[contains(@class,'tw-p-3 tw-text-right')]/button")).click();
-    	WebElement saveTour = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@type='submit']")));
-    	saveTour.click();
     	
     }
     
+    /** Return the Tour name of the selected Tour
+     * @return
+     */
     public String tourNameSelected() {
     	return myTourName.getText();
     	

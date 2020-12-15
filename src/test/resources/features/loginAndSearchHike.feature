@@ -8,7 +8,7 @@ Feature: Login and search Tours
 		
   Example: I want to be able to search hiking tour
   # Please Provide a valid Username and Password for Komoot.com with which you have already Signed Up.
-    When I login using email '<<<<<Please Enter a Valid Username for Komoot.com>>>>>' and password '<<<<Please Enter Valid Password>>>>>'
-    And I search for tour 'hike' in location 'Munich'
+    When I login using email <<<<<Enter Email id >>>>> and password <<<<< Enter Password >>>>>
+    And I search for tour 'hike' in location 'Berlin'
     And I apply difficulty 'Easy' and distance 5 filters
     Then the filtered search results are displayed

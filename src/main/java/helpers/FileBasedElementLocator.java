@@ -8,6 +8,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.pagefactory.AbstractAnnotations;
 import org.openqa.selenium.support.pagefactory.ElementLocator;
 
+/**
+ * Helper to find element on Page based on object locator values from json file
+ */
+
 public class FileBasedElementLocator implements ElementLocator {
 	
 	private final SearchContext searchContext;

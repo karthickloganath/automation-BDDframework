@@ -8,6 +8,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import helpers.SearchWith;
 
+/**
+ * Class representing the Komoot Products Shopping
+ */
+
 public class ShopProductPage extends HomePage{
 	
     public static final String PAGE = "ShopProductPage";
@@ -41,10 +45,14 @@ public class ShopProductPage extends HomePage{
     public void clickDiscoverMore() {
     	WebDriverWait webDriverWait = new WebDriverWait(driver, 10);
     	webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//a[@href='/product']")));		
-    	driver.findElement(By.xpath("//a/span[text()='Discover More']")).click();
+    	driver.findElement(By.xpath("//a/span[text()='See all map options']")).click();
     	
     }
     
+    /** Validate the Bundle name from user input and return the actual name
+     * @param region
+     * @return
+     */
     public String regionText(String region) {
     	if(region.equalsIgnoreCase("Single Region")) {
     		return singleRegion.getText();
@@ -58,6 +66,10 @@ public class ShopProductPage extends HomePage{
     	return null;
     }
     
+    /** Validate the Bundle name from user input and return the cost
+     * @param region
+     * @return
+     */
     public Float regionPrice(String region) {
     	if(region.equalsIgnoreCase("Single Region")) {
     		return Float.parseFloat(singleRegionPrice.getText().substring(1));
@@ -71,6 +83,9 @@ public class ShopProductPage extends HomePage{
     	return null;
     }
     
+    /** Validate whether the Maps logo is displayed
+     * @return
+     */
     public boolean validateMapsPage() {
     	return(mapsLogo.isDisplayed());
     }

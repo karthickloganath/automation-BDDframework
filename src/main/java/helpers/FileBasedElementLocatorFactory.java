@@ -6,6 +6,10 @@ import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.support.pagefactory.ElementLocator;
 import org.openqa.selenium.support.pagefactory.ElementLocatorFactory;
 
+/**
+ * Helper Locator factory for caching and locating elements on Page
+ */
+
 public class FileBasedElementLocatorFactory implements ElementLocatorFactory {
     private final SearchContext searchContext;
 

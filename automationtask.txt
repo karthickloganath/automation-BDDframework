@@ -1,6 +1,6 @@
 # Assignment Notes
 #
-##### This is a temporary file for reference to the 7Senders team for evaluating the QA Task assigned #######
+##### This is a temporary file for reference for the Hiring team for evaluating the QA Capabilities #######
 
 # To run the project, please use the instructions as in readMe.md
 # Please note this project was executed and results-verified only in windows machine with chrome version 87.0.4280.88

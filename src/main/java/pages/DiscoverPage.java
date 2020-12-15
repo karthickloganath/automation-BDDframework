@@ -5,6 +5,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import helpers.SearchWith;
 
+/**
+ * Class representing the Discover Komoot Page
+ */
+
 public class DiscoverPage extends HomePage {
     public static final String PAGE = "DiscoverPage";
 
@@ -36,14 +40,20 @@ public class DiscoverPage extends HomePage {
         super(driver);
     }
 
+    // To select Hiking Icon
     public void selectHiking() {
         hiking.click();
     }
-
+    
+    // To Select Biking Icon
     public void selectBike() {
         bike.click();
     }
 
+/**
+ * Enter the location and select from dropdown
+ * @param testLocation
+ */
     public void enterLocation(String testLocation) throws InterruptedException {
         location.click();
         location.sendKeys(testLocation);
@@ -51,14 +61,17 @@ public class DiscoverPage extends HomePage {
         location.sendKeys(Keys.ENTER);
     }
 
+    // To click on search button
     public void clickSearch() {
         searchBtn.click();
     }
-    
+ 
+    // To select Shop option present in Discover page
     public void clickShop() {
         shop.click();
     }
-    
+   
+    // SignOut of Komoot account
     public void signOut() {
     	myMenu.click();
     	signOutBtn.click();
